@@ -1,5 +1,6 @@
 // Animated background layer drawn into .bg.
-// Preview a variant with ?bg=liquid|graph|dots|stars|wire|type; it is kept while browsing the site in that tab.
+// Preview a variant with ?bg=<name>; it is kept while browsing the site in that tab.
+// Calm, CSS-only variants: clean, spot, grid, grain, calm, fade. Animated canvas variants: liquid, graph, dots, stars, wire, type.
 (() => {
   const DEFAULT = "none"; // "none" keeps the plain gradient blobs
   const store = (k, v) => { try { return v === undefined ? sessionStorage.getItem(k) : sessionStorage.setItem(k, v); } catch { return null; } };
@@ -8,6 +9,13 @@
   const mode = asked || store("bg") || DEFAULT;
   const host = document.querySelector(".bg");
   if (!host || mode === "none") return;
+  if (["clean", "spot", "grid", "grain", "calm", "fade"].includes(mode)) {
+    host.dataset.fx = mode;
+    if (mode === "spot") addEventListener("pointermove", (e) => {
+      host.style.setProperty("--mx", `${e.clientX}px`); host.style.setProperty("--my", `${e.clientY}px`);
+    }, { passive: true });
+    return;
+  }
   const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canvas = document.createElement("canvas");
   canvas.className = "bgfx";
