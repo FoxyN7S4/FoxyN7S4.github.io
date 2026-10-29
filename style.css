@@ -210,6 +210,8 @@ h2 { font-size: clamp(32px, 5vw, 64px); font-weight: 800; }
 .contact { text-align: center; padding: 120px var(--pad) 48px; opacity: 0; transition: opacity .8s; }
 .contact h2 { font-size: clamp(36px, 6vw, 84px); }
 .contact .cta { justify-content: center; margin-top: 40px; }
+.contact .me { width: 136px; height: 136px; border-radius: 50%; object-fit: cover; padding: 4px; background: var(--grad); display: block; margin: 0 auto 14px; }
+.contact .me-cap { color: var(--muted); font-size: 15px; margin: 0 0 30px; }
 .foot { color: var(--muted); font-size: 13px; margin-top: 96px; }
 
 /* Player */
