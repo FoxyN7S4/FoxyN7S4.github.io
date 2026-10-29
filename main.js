@@ -86,7 +86,8 @@ if (idx >= 0) {
       </div>
     </div>`;
   const grid = document.getElementById("works");
-  if (s.works.filter((w) => w.shape === "h").length >= s.works.length / 3) grid.classList.add("wide");
+  if (s.cols3) grid.classList.add("cols3");
+  else if (s.works.filter((w) => w.shape === "h").length >= s.works.length / 3) grid.classList.add("wide");
   for (const w of s.works) grid.append(card(w));
 }
 

@@ -95,6 +95,7 @@ h2 { font-size: clamp(32px, 5vw, 64px); font-weight: 800; }
 /* Work grid: masonry columns so mixed formats sit without gaps */
 .grid { columns: 4 240px; column-gap: 14px; }
 .grid.wide { columns: 3 300px; }
+.grid.cols3 { columns: 3 260px; }
 .grid > .card { width: 100%; margin: 0 0 14px; break-inside: avoid; display: block; }
 .card {
   position: relative; padding: 0; border: 1px solid var(--line); cursor: pointer; text-align: left;
@@ -207,7 +208,7 @@ dialog .case b { color: var(--text); margin-right: 6px; }
   .nav nav a:nth-child(n+4) { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 48px; }
   .hero-fan { height: 400px; }
-  .grid { columns: 2; column-gap: 10px; }
+  .grid, .grid.cols3 { columns: 2; column-gap: 10px; }
   .grid > .card { margin-bottom: 10px; }
   .dirs { grid-template-columns: 1fr 1fr; }
   .sec-head, .ph-row { flex-direction: column; gap: 4px; }

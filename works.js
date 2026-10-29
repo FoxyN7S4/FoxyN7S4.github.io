@@ -1,6 +1,7 @@
 // Works grouped by direction; each direction has its own page (<id>.html).
 // shape: v = vertical 9:16, p = portrait 4:5, s = square, h = horizontal 16:9.
 // img: true marks a still image. task / role / result show in the case card when filled in.
+// cols3: true on a section uses a 3-column grid (2 on phones).
 const SECTIONS = [
   {
     id: "brand",
@@ -44,13 +45,17 @@ const SECTIONS = [
     id: "igaming",
     nav: "iGaming",
     title: "iGaming",
-    lead: "Performance creatives for slot and crash games: character animation, gameplay and bonus end cards. A short compliance-safe selection: 18+, no celebrities, no fake payment notifications, no cash or income claims. More on request.",
-    tags: ["18+", "Character animation", "Gameplay", "Compliance-safe"],
+    lead: "Performance creatives for slot and crash games: character animation, gameplay, AI presenters and localization. Selected with a compliance filter: 18+, no celebrities, no fake payment notifications or banknotes. More on request.",
+    tags: ["18+", "Character animation", "AI presenters", "Localization"],
+    cols3: true,
     works: [
-      { id: "63_igaming_chicken-road",    shape: "s", brand: "Chicken Road", title: "Character + gameplay" },
-      { id: "64_igaming_chicken-road-v2", shape: "s", brand: "Chicken Road", title: "Character loop — V2" },
-      { id: "65_igaming_chicken-road-v3", shape: "s", brand: "Chicken Road", title: "Character loop — V3" },
-      { id: "62_igaming_olymp-static",    shape: "h", brand: "Olympus",      title: "Static — PWA banner", img: true },
+      { id: "68_igaming_ai-presenter-exterior", shape: "v", brand: "AI presenter",     title: "Casino welcome offer — exterior, FR" },
+      { id: "63_igaming_chicken-road",          shape: "s", brand: "Chicken Road",     title: "Character + gameplay" },
+      { id: "66_igaming_olympus-it",            shape: "v", brand: "Gates of Olympus", title: "Bonus hook — IT / GR localization" },
+      { id: "64_igaming_chicken-road-v2",       shape: "s", brand: "Chicken Road",     title: "Character loop — V2" },
+      { id: "69_igaming_ai-presenter-bar",      shape: "v", brand: "AI presenter",     title: "Casino welcome offer — interior, FR" },
+      { id: "65_igaming_chicken-road-v3",       shape: "s", brand: "Chicken Road",     title: "Character loop — V3" },
+      { id: "62_igaming_olymp-static",          shape: "h", brand: "Olympus",          title: "Static — PWA banner", img: true },
     ],
   },
   {
