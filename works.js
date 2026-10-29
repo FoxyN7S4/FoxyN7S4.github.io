@@ -50,12 +50,10 @@ const SECTIONS = [
     cols3: true,
     works: [
       { id: "68_igaming_ai-presenter-exterior", shape: "v", brand: "AI presenter",     title: "Casino welcome offer — exterior, FR" },
+      { id: "62_igaming_olymp-static",          shape: "h", brand: "Olympus",          title: "Static — PWA banner", img: true },
       { id: "63_igaming_chicken-road",          shape: "s", brand: "Chicken Road",     title: "Character + gameplay" },
       { id: "66_igaming_olympus-it",            shape: "v", brand: "Gates of Olympus", title: "Bonus hook — IT / GR localization" },
-      { id: "64_igaming_chicken-road-v2",       shape: "s", brand: "Chicken Road",     title: "Character loop — V2" },
       { id: "69_igaming_ai-presenter-bar",      shape: "v", brand: "AI presenter",     title: "Casino welcome offer — interior, FR" },
-      { id: "65_igaming_chicken-road-v3",       shape: "s", brand: "Chicken Road",     title: "Character loop — V3" },
-      { id: "62_igaming_olymp-static",          shape: "h", brand: "Olympus",          title: "Static — PWA banner", img: true },
     ],
   },
   {
@@ -105,4 +103,4 @@ const SECTIONS = [
 const FEATURED = ["40_bvlgari_ring", "10_gazer_tv-ui", "12_montblanc_cube", "63_igaming_chicken-road", "42_montblanc_pen", "41_montblanc_collection", "05_taimi_mobile-3d-phone", "16_3d_node-motion"];
 
 // Cover video for each direction card on the home page.
-const COVERS = { brand: "11_bvlgari_snow-globe", "3d": "16_3d_node-motion", igaming: "64_igaming_chicken-road-v2", product: "05_taimi_mobile-3d-phone", explainers: "15_explainer_collaboration" };
+const COVERS = { brand: "11_bvlgari_snow-globe", "3d": "16_3d_node-motion", igaming: "66_igaming_olympus-it", product: "05_taimi_mobile-3d-phone", explainers: "15_explainer_collaboration" };
