@@ -58,15 +58,30 @@ h1 { font-size: clamp(48px, 8.5vw, 128px); font-weight: 800; }
 .lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--muted); max-width: 520px; margin: 28px 0 0; }
 .lead b { color: var(--text); font-weight: 600; }
 
-.hero-fan { position: relative; height: min(640px, 70vh); }
+.hero-fan {
+  position: relative; height: min(640px, 70vh);
+  transform: perspective(1400px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .4s ease-out;
+}
 .hero-fan video {
   position: absolute; top: 50%; left: 50%; width: 42%; aspect-ratio: 9 / 16; object-fit: cover;
   border-radius: var(--radius); border: 1px solid var(--line);
   box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .8);
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1), opacity .4s, filter .4s, box-shadow .4s;
 }
 .hero-fan video:nth-child(1) { transform: translate(-115%, -46%) rotate(-9deg); opacity: .85; }
 .hero-fan video:nth-child(2) { transform: translate(-50%, -52%); z-index: 2; box-shadow: 0 40px 120px -20px rgba(255, 63, 164, .55); }
 .hero-fan video:nth-child(3) { transform: translate(15%, -46%) rotate(9deg); opacity: .85; }
+/* Mouse over the fan: the cards spread out and the one under the cursor comes forward */
+@media (hover: hover) and (pointer: fine) {
+  .hero-fan:hover video:nth-child(1) { transform: translate(-135%, -44%) rotate(-15deg); }
+  .hero-fan:hover video:nth-child(2) { transform: translate(-50%, -55%) scale(1.04); }
+  .hero-fan:hover video:nth-child(3) { transform: translate(35%, -44%) rotate(15deg); }
+  .hero-fan video:hover { z-index: 3; opacity: 1; box-shadow: 0 40px 120px -20px rgba(124, 77, 255, .65); }
+  .hero-fan video:nth-child(1):hover { transform: translate(-125%, -52%) rotate(-5deg) scale(1.1); }
+  .hero-fan video:nth-child(2):hover { transform: translate(-50%, -57%) scale(1.1); box-shadow: 0 40px 120px -20px rgba(255, 63, 164, .75); }
+  .hero-fan video:nth-child(3):hover { transform: translate(25%, -52%) rotate(5deg) scale(1.1); }
+  .hero-fan:has(video:hover) video:not(:hover) { opacity: .55; filter: saturate(.7) brightness(.8); }
+}
 
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .btn {
@@ -219,4 +234,5 @@ dialog .case b { color: var(--text); margin-right: 6px; }
 @media (prefers-reduced-motion: reduce) {
   .bg i, .track { animation: none; }
   .section, .contact { opacity: 1; transform: none; transition: none; }
+  .hero-fan, .hero-fan video { transition: none; }
 }

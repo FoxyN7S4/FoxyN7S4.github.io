@@ -100,6 +100,17 @@ if (next) {
   next.innerHTML = `<a href="${nid}.html"><span>Next</span><strong>${ntitle} →</strong></a>`;
 }
 
+// Hero fan tilts slightly toward the cursor
+const fan = document.querySelector(".hero-fan");
+if (fan && canHover && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  fan.addEventListener("mousemove", (e) => {
+    const r = fan.getBoundingClientRect();
+    fan.style.setProperty("--ry", `${((e.clientX - r.left) / r.width - 0.5) * 12}deg`);
+    fan.style.setProperty("--rx", `${((e.clientY - r.top) / r.height - 0.5) * -10}deg`);
+  });
+  fan.addEventListener("mouseleave", () => { fan.style.removeProperty("--rx"); fan.style.removeProperty("--ry"); });
+}
+
 // Reveal on scroll
 const io = new IntersectionObserver((entries) => {
   for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
