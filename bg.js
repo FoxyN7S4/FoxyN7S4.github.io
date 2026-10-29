@@ -2,7 +2,7 @@
 // Preview a variant with ?bg=<name>; it is kept while browsing the site in that tab.
 // Calm, CSS-only variants: clean, spot, grid, grain, calm, fade. Animated canvas variants: liquid, graph, dots, stars, wire, type.
 (() => {
-  const DEFAULT = "none"; // "none" keeps the plain gradient blobs
+  const DEFAULT = "liquid"; // ?bg=none shows the plain gradient blobs
   const store = (k, v) => { try { return v === undefined ? sessionStorage.getItem(k) : sessionStorage.setItem(k, v); } catch { return null; } };
   const asked = new URLSearchParams(location.search).get("bg");
   if (asked) store("bg", asked);
@@ -56,7 +56,12 @@
     const gl = canvas.getContext("webgl", { antialias: false, premultipliedAlpha: false });
     if (!gl) return null;
     const vs = "attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}";
-    const fs = `precision mediump float;
+    const fs = `#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+
 uniform vec2 r;uniform float t;uniform vec2 m;
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
