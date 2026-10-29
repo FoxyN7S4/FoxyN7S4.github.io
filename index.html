@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yevheniia Yashna — Motion Designer · Performance Creatives</title>
+<meta name="description" content="Motion designer with 7+ years in performance marketing: UA creatives for product apps, brand motion, 3D and After Effects automation.">
+<meta property="og:title" content="Yevheniia Yashna — Motion Designer">
+<meta property="og:description" content="UA creatives for product apps, brand motion, 3D and After Effects automation.">
+<meta property="og:image" content="media/01_taimi_couple-knees.webp">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#top">YY</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#automation">Automation</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Motion Designer · Performance &amp; UA Creatives</p>
+      <h1>Yevheniia Yashna</h1>
+      <p class="lead">7+ years turning product features into ads that install. Motion, 3D and AI for mobile apps and brands, with my own After Effects tools for fast, error-free production.</p>
+      <div class="cta">
+        <!-- TODO: add cv.pdf and restore: <a class="btn" href="cv.pdf" download>Download CV</a> -->
+        <a class="btn primary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-reel">
+      <video src="media/01_taimi_couple-knees.mp4" poster="media/01_taimi_couple-knees.webp" autoplay muted loop playsinline></video>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <h2>Selected work</h2>
+    <div class="filters" role="tablist">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="product">Product</button>
+      <button data-filter="brand">Brands</button>
+      <button data-filter="3d">3D</button>
+      <button data-filter="igaming">iGaming</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="automation" class="section">
+    <h2>Automation</h2>
+    <p class="section-lead">After Effects scripts I built to save time, avoid errors and keep creativity flowing.</p>
+    <div class="tools">
+      <article>
+        <h3>Auto-Namer</h3>
+        <p>Renames compositions from a defined structure (number, audience, language, task, template, format). Removes naming errors across hundreds of exports.</p>
+      </article>
+      <article>
+        <h3>Emoji Pin</h3>
+        <p>Adds and locks emojis to text in seconds: no dragging, resizing or alignment fixes.</p>
+      </article>
+      <article>
+        <h3>Comments to Subtitles</h3>
+        <p>Reads comments embedded in a video and turns them into properly timed text layers in After Effects.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li><span>2025 — now</span><strong>Motion Designer</strong>, product company (NDA)</li>
+      <li><span>2024 — 2025</span><strong>Motion Designer</strong>, Appflame (Taimi)</li>
+      <li><span>2022 — 2024</span><strong>Motion Designer</strong>, Traffic Devils</li>
+      <li><span>2020 — 2022</span><strong>Motion Designer</strong>, Red&amp;White agency</li>
+      <li><span>2018 — 2020</span><strong>Freelance</strong></li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>Skills &amp; tools</h2>
+    <ul class="skills">
+      <li><b>Motion</b> After Effects, Premiere Pro</li>
+      <li><b>3D</b> Blender, Cinema 4D</li>
+      <li><b>Static</b> Figma, Photoshop</li>
+      <li><b>AI</b> Higgsfield, Claude, Cursor</li>
+      <li><b>Platforms</b> Meta, TikTok, YouTube</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Let's talk</h2>
+    <p class="section-lead">Open to full-time roles in product companies.</p>
+    <div class="cta">
+      <!-- TODO: <a class="btn primary" href="mailto:...">Email</a> -->
+      <a class="btn primary" href="https://www.linkedin.com/in/foxyns/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://t.me/MOTION_YY" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </section>
+
+</main>
+
+<dialog id="player">
+  <button class="close" aria-label="Close">×</button>
+  <video controls playsinline></video>
+  <div class="case"></div>
+</dialog>
+
+<script src="works.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
