@@ -157,7 +157,7 @@ h2 { font-size: clamp(32px, 5vw, 64px); font-weight: 800; }
 /* Direction cards (home) */
 .dirs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .dir {
-  position: relative; display: block; aspect-ratio: 5 / 4; border-radius: var(--radius); overflow: hidden;
+  position: relative; display: block; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--line); text-decoration: none; background: #120e1a; transition: transform .35s, border-color .35s;
 }
 .dir:hover { transform: translateY(-4px); border-color: rgba(255, 63, 164, .5); }
@@ -246,7 +246,8 @@ dialog .case b { color: var(--text); margin-right: 6px; }
   .hero-fan { height: 400px; }
   .grid, .grid.cols3 { columns: 2; column-gap: 10px; }
   .grid > .card { margin-bottom: 10px; }
-  .dirs { grid-template-columns: 1fr; }
+  .dirs { grid-template-columns: 1fr 1fr; }
+  .dir { aspect-ratio: 3 / 4; }
   .sec-head, .ph-row { flex-direction: column; gap: 4px; }
   .num { padding-top: 0; }
   .section { padding-block: 56px; }
