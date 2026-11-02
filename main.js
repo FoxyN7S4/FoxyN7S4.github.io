@@ -46,9 +46,12 @@ if (page === "home") {
   const dirs = document.getElementById("dirs");
   SECTIONS.forEach((s, i) => {
     const c = COVERS[s.id];
+    const cover = COVER_IMAGES[s.id]
+      ? `<img src="media/${COVER_IMAGES[s.id]}.webp" alt="" loading="lazy">`
+      : `<video src="media/${c}.mp4" poster="media/${c}.webp" muted loop playsinline preload="none"></video>`;
     dirs.insertAdjacentHTML("beforeend", `
       <a class="dir" href="${s.id}.html">
-        <video src="media/${c}.mp4" poster="media/${c}.webp" muted loop playsinline preload="none"></video>
+        ${cover}
         <span class="dir-body">
           <span class="num">${String(i + 1).padStart(2, "0")}</span>
           <strong>${s.title}</strong>
@@ -57,7 +60,8 @@ if (page === "home") {
       </a>`);
   });
   dirs.insertAdjacentHTML("beforeend", `
-    <a class="dir dir-auto" href="automation.html">
+    <a class="dir${COVER_IMAGES.automation ? "" : " dir-auto"}" href="automation.html">
+      ${COVER_IMAGES.automation ? `<img src="media/${COVER_IMAGES.automation}.webp" alt="" loading="lazy">` : ""}
       <span class="dir-body">
         <span class="num">${String(SECTIONS.length + 1).padStart(2, "0")}</span>
         <strong>Automation</strong>
