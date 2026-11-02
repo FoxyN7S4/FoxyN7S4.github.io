@@ -161,7 +161,7 @@ h2 { font-size: clamp(32px, 5vw, 64px); font-weight: 800; }
   border: 1px solid var(--line); text-decoration: none; background: #120e1a; transition: transform .35s, border-color .35s;
 }
 .dir:hover { transform: translateY(-4px); border-color: rgba(255, 63, 164, .5); }
-.dir video { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .75; transition: opacity .4s, transform .6s; }
+.dir video { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .9; transition: opacity .4s, transform .6s; }
 .dir:hover video { opacity: 1; transform: scale(1.05); }
 .dir-body {
   position: absolute; inset: auto 0 0 0; padding: 60px 22px 22px; display: flex; flex-direction: column; gap: 6px;

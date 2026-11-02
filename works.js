@@ -103,4 +103,4 @@ const SECTIONS = [
 const FEATURED = ["40_bvlgari_ring", "10_gazer_tv-ui", "12_montblanc_cube", "63_igaming_chicken-road", "42_montblanc_pen", "41_montblanc_collection", "05_taimi_mobile-3d-phone", "16_3d_node-motion"];
 
 // Cover video for each direction card on the home page.
-const COVERS = { brand: "11_bvlgari_snow-globe", "3d": "16_3d_node-motion", igaming: "66_igaming_olympus-it", product: "05_taimi_mobile-3d-phone", explainers: "15_explainer_collaboration" };
+const COVERS = { brand: "cover_brand", product: "cover_product", explainers: "cover_explainers", igaming: "cover_igaming", "3d": "cover_3d" }; // cover_* = 4:5 loops cut for the home cards
