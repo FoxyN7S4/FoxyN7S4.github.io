@@ -102,8 +102,5 @@ const SECTIONS = [
 // Shown on the home page under "Selected work".
 const FEATURED = ["40_bvlgari_ring", "10_gazer_tv-ui", "12_montblanc_cube", "63_igaming_chicken-road", "42_montblanc_pen", "41_montblanc_collection", "05_taimi_mobile-3d-phone", "16_3d_node-motion"];
 
-// Designed cover image (media/<name>.webp) for a direction card; directions without one show their cover video.
-const COVER_IMAGES = { brand: "cover_brand", "3d": "cover_3d", igaming: "cover_igaming", product: "cover_product", automation: "cover_automation" };
-
 // Cover video for each direction card on the home page.
 const COVERS = { brand: "11_bvlgari_snow-globe", "3d": "16_3d_node-motion", igaming: "66_igaming_olympus-it", product: "05_taimi_mobile-3d-phone", explainers: "15_explainer_collaboration" };
