@@ -257,7 +257,19 @@ dialog .case b { color: var(--text); margin-right: 6px; }
   .grid > .card { margin-bottom: 10px; }
   .dirs { grid-template-columns: 1fr 1fr; }
   .sec-head, .ph-row { flex-direction: column; gap: 4px; }
-  .dir { aspect-ratio: 3 / 4; }
+  /* Phone: caption under the cover so titles never sit on the work */
+  .dir { aspect-ratio: auto; display: flex; flex-direction: column; }
+  .dir video { height: auto; aspect-ratio: 4 / 5; opacity: 1; }
+  .dir:hover video { transform: none; }
+  .dir-body, .dir-auto .dir-body { position: static; inset: auto; flex: 1; justify-content: flex-start; padding: 12px 14px 14px; gap: 3px; background: #120e1a; }
+  .dir-body .num { font-size: 11px; }
+  .dir-body strong { font-size: 15px; line-height: 1.2; }
+  .dir .count { font-size: 12px; }
+  .tl { position: relative; inset: auto; aspect-ratio: 4 / 5; padding: 14px 12px 0; }
+  .tl-dots { margin-bottom: 12px; }
+  .tl-row { height: auto; padding: 8px 0; }
+  .tl-name { display: none; }
+  .tl-head { top: 30px; height: 60%; }
   .num { padding-top: 0; }
   .section { padding-block: 56px; }
 }
