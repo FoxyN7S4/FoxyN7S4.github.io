@@ -85,6 +85,7 @@ const SECTIONS = [
     lead: "Blender and Cinema 4D: brand objects, jewelry, abstract motion and hard-surface concepts.",
     tags: ["Blender", "Cinema 4D", "Product", "Hard surface"],
     works: [
+      { id: "70_3d_phone-ui",     shape: "p", brand: "3D",    title: "Phone UI — fitness app loop", task: "Seamless 6 s 3D loop: app UI cards lift off the screen while the phone turns", role: "Concept, modeling, UI, animation, lighting and render (Blender, Cycles)" },
       { id: "16_3d_node-motion",  shape: "h", brand: "3D",    title: "Node motion" },
       { id: "09_taimi_logo-3d",   shape: "s", brand: "Taimi", title: "3D logo" },
       { id: "26_3d_ring",         shape: "p", brand: "3D",    title: "Jewelry render", img: true },
@@ -103,4 +104,4 @@ const SECTIONS = [
 const FEATURED = ["40_bvlgari_ring", "09_taimi_logo-3d", "62_igaming_olymp-static", "53_explainer_google-ads", "42_montblanc_pen", "63_igaming_chicken-road", "08_taimi_ai-visual", "11_bvlgari_snow-globe", "41_montblanc_collection", "01_taimi_couple-knees", "66_igaming_olympus-it"];
 
 // Cover video for each direction card on the home page.
-const COVERS = { brand: "cover_brand", product: "cover_product", explainers: "cover_explainers", igaming: "cover_igaming", "3d": "cover_3d" }; // cover_* = 4:5 loops cut for the home cards
+const COVERS = { brand: "cover_brand", product: "cover_product", explainers: "cover_explainers", igaming: "cover_igaming", "3d": "70_3d_phone-ui" }; // cover_* = 4:5 loops cut for the home cards
