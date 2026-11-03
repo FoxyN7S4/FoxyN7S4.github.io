@@ -270,6 +270,16 @@ dialog .case b { color: var(--text); margin-right: 6px; }
   .tl-row { height: auto; padding: 8px 0; }
   .tl-name { display: none; }
   .tl-head { top: 30px; height: 60%; }
+  /* Phone: work captions under the media too */
+  .card.v, .card.p, .card.s, .card.h { aspect-ratio: auto; }
+  .card video, .card img { height: auto; }
+  .card.v video, .card.v img { aspect-ratio: 9 / 16; }
+  .card.p video, .card.p img { aspect-ratio: 4 / 5; }
+  .card.s video, .card.s img { aspect-ratio: 1; }
+  .card.h video, .card.h img { aspect-ratio: 16 / 9; }
+  .label { position: static; display: block; padding: 10px 12px 12px; background: #120e1a; font-size: 13px; }
+  .label b { font-size: 10px; }
+  .play { width: 30px; height: 30px; top: 8px; right: 8px; }
   .num { padding-top: 0; }
   .section { padding-block: 56px; }
 }
