@@ -59,6 +59,10 @@ em { font-style: normal; background: var(--grad); -webkit-background-clip: text;
 }
 .logo { font: 800 20px Unbounded; text-decoration: none; }
 .logo span { color: var(--pink); }
+.burger { display: none; flex-direction: column; justify-content: center; gap: 6px; width: 40px; height: 40px; padding: 0 10px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); cursor: pointer; }
+.burger i { display: block; height: 2px; border-radius: 2px; background: var(--text); transition: transform .25s; }
+.nav.open .burger i:first-child { transform: translateY(4px) rotate(45deg); }
+.nav.open .burger i:last-child { transform: translateY(-4px) rotate(-45deg); }
 .nav nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
 .nav nav a { text-decoration: none; color: var(--muted); font-size: 14px; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
 .nav nav a:hover { color: var(--text); background: var(--surface); }
@@ -251,6 +255,15 @@ dialog .case b { color: var(--text); margin-right: 6px; }
 @media (max-width: 760px) {
   .nav { margin-inline: 12px; }
   .nav nav a:nth-child(n+4) { display: none; }
+  /* Burger test mode (?nav=burger) */
+  .nav-burger .nav nav { display: none; }
+  .nav-burger .nav nav a:nth-child(n+4) { display: block; }
+  .nav-burger .nav.open nav {
+    display: flex; flex-direction: column; gap: 2px; position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+    padding: 10px; border: 1px solid var(--line); border-radius: 22px; background: rgba(12, 10, 20, .96); backdrop-filter: blur(16px);
+  }
+  .nav-burger .nav.open nav a { font-size: 17px; padding: 12px 16px; border-radius: 14px; }
+  .nav-burger .burger { display: flex; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 48px; }
   .hero-fan { height: 400px; }
   .grid, .grid.cols3 { columns: 2; column-gap: 10px; }

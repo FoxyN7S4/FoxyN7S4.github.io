@@ -11,6 +11,24 @@ nav.innerHTML = SECTIONS.map((s) =>
   `<a href="${s.id}.html"${page === s.id ? ' class="active"' : ""}>${s.nav}</a>`).join("")
   + `<a href="automation.html"${page === "automation" ? ' class="active"' : ""}>Automation</a><a href="#contact">Contact</a>`;
 
+// Test mode: phone burger menu, opened with ?nav=burger (kept for this tab), ?nav=off turns it off
+(() => {
+  const store = (v) => { try { return v === undefined ? sessionStorage.getItem("nav") : v ? sessionStorage.setItem("nav", v) : sessionStorage.removeItem("nav"); } catch { return null; } };
+  const q = new URLSearchParams(location.search).get("nav");
+  if (q === "burger") store("burger"); else if (q === "off") store("");
+  if (store() !== "burger") return;
+  document.body.classList.add("nav-burger");
+  const bar = document.querySelector(".nav");
+  const btn = document.createElement("button");
+  btn.className = "burger"; btn.setAttribute("aria-label", "Menu"); btn.setAttribute("aria-expanded", "false");
+  btn.innerHTML = "<i></i><i></i>";
+  bar.append(btn);
+  const toggle = (on) => { bar.classList.toggle("open", on); btn.setAttribute("aria-expanded", String(on)); };
+  btn.addEventListener("click", () => toggle(!bar.classList.contains("open")));
+  nav.addEventListener("click", (e) => { if (e.target.closest("a")) toggle(false); });
+  document.addEventListener("click", (e) => { if (!bar.contains(e.target)) toggle(false); });
+})();
+
 function card(w) {
   const el = document.createElement("button");
   el.className = `card ${w.shape}`;
