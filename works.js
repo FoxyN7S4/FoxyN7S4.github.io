@@ -100,7 +100,7 @@ const SECTIONS = [
 ];
 
 // Shown on the home page under "Selected work".
-const FEATURED = ["40_bvlgari_ring", "10_gazer_tv-ui", "12_montblanc_cube", "63_igaming_chicken-road", "42_montblanc_pen", "41_montblanc_collection", "05_taimi_mobile-3d-phone", "16_3d_node-motion"];
+const FEATURED = ["40_bvlgari_ring", "09_taimi_logo-3d", "62_igaming_olymp-static", "53_explainer_google-ads", "42_montblanc_pen", "63_igaming_chicken-road", "08_taimi_ai-visual", "11_bvlgari_snow-globe", "41_montblanc_collection", "01_taimi_couple-knees", "66_igaming_olympus-it"];
 
 // Cover video for each direction card on the home page.
 const COVERS = { brand: "cover_brand", product: "cover_product", explainers: "cover_explainers", igaming: "cover_igaming", "3d": "cover_3d" }; // cover_* = 4:5 loops cut for the home cards
