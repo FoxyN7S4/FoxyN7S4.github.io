@@ -255,7 +255,7 @@ dialog .case b { color: var(--text); margin-right: 6px; }
 @media (max-width: 760px) {
   .nav { margin-inline: 12px; }
   .nav nav a:nth-child(n+4) { display: none; }
-  /* Burger test mode (?nav=burger) */
+  /* Phone burger menu */
   .nav-burger .nav nav { display: none; }
   .nav-burger .nav nav a:nth-child(n+4) { display: block; }
   .nav-burger .nav.open nav {
