@@ -92,7 +92,6 @@ const SECTIONS = [
       { id: "27_3d_rings",        shape: "p", brand: "3D",    title: "Signet rings", img: true },
       { id: "17_3d_willys",       shape: "h", brand: "3D",    title: "Willys — documentary" },
       { id: "22_3d_faberge",      shape: "h", brand: "3D",    title: "Fabergé egg", img: true },
-      { id: "28_3d_faberge-2",    shape: "h", brand: "3D",    title: "Fabergé egg — studio", img: true },
       { id: "24_3d_plane",        shape: "h", brand: "3D",    title: "Aircraft concept", img: true },
       { id: "23_3d_tank",         shape: "h", brand: "3D",    title: "Armored vehicle concept", img: true },
       { id: "25_3d_crusher",      shape: "h", brand: "3D",    title: "Crusher concept", img: true },
